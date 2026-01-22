@@ -16,7 +16,7 @@ The goal was to transmit HD images through a "hostile" audio channel (static) wi
 *   **Stealth:** The carrier signal is standard PCM Audio (WAV) sounding like Gaussian white noise.
 *   **Security:** Demonstrated a **31dB Security Margin**. Unauthorized decryption attempts using incorrect seeds yield pure entropy (<10dB PSNR).
 
-![Security Proof](/screenshots/original.jpg/) ![Security Proof](/screenshots/decoding_authorized.png/) ![Security Proof](/screenshots/decoding_unauthorized.png/)
+![Security Proof](screenshots/original.jpg) ![Security Proof](screenshots/decoding_authorized.png) ![Security Proof](screenshots/decoding_unauthorized.png)
 *Fig 1: Left: Original. Middle: Authorized Decryption (God Gene). Right: Unauthorized Decryption (Wrong Key).*
 
 ---
@@ -42,10 +42,10 @@ The resulting data stream is normalized and encapsulated into a 16-bit PCM WAV c
 This repository contains the compiled `Umbra_Terminal.exe`. No Python installation is required.
 
 ### Download
-[**Download Latest Release (v1.0)**](LINK_TO_YOUR_GITHUB_RELEASES_PAGE)
+[**Download Latest Release (v1.0)**](https://github.com/Stelliro/Project-Umbra-Demo/releases/tag/1.0)
 
 ### Interface
-![Interface](path/to/your/interface.png)
+![Interface](screenshots/interface.png)
 
 ### 1. Transmitter (Encoder)
 1.  Click **[ LOAD IMAGE ]** and select any PNG or JPG.

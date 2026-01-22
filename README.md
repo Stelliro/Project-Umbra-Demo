@@ -48,22 +48,6 @@ The resulting data stream is normalized and encapsulated into a **16-bit PCM WAV
 
 ## 💻 Installation & Usage
 
-### Option A: Standalone Executable (Recommended)
-No Python installation required.
+No Python installation avalable yet.
 1. Download the latest `Umbra_Terminal.exe` from the **[Releases Page](../../releases)**.
 2. Run the executable.
-
-### Option B: Run from Source
-```bash
-# Clone the repository
-git clone https://github.com/Stelliro/Project-Umbra.git
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the terminal
-python app.py

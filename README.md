@@ -32,7 +32,7 @@ The system was benchmarked against standard steganalysis detection methods.
 | **Payload Efficiency** | **~85%** | High data density retention compared to standard spread-spectrum techniques. |
 
 ### Visual Verification
-*Demonstrating the cryptographic strength of the chaotic permutation layer.*
+*Demonstration of the cryptographic strength of the chaotic permutation layer.*
 
 | Original Signal | Authorized Decode (God Gene) | Unauthorized Decode (Wrong Key) |
 | :---: | :---: | :---: |
@@ -72,6 +72,12 @@ I built a modern, dark-themed GUI (using `CustomTkinter`) to make this technolog
 No Python environment required. Download the portable executable:
 
 [**Download Umbra_Terminal_v1.0.exe**](../../releases)
+
+---
+
+## 💡 Acknowledgements & Inspiration
+
+This project was inspired by the work of **[Benn Jordan](https://github.com/bennjordan)**. His research into audio spectrum analysis, sonification, and the hidden data within natural soundscapes provided the conceptual foundation for exploring images hidden within static.
 
 ---
 

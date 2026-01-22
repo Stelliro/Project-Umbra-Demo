@@ -84,14 +84,4 @@ No Python environment required. Download the portable executable:
 *   **Version Control:** Git
 
 ---
-
-## 📬 Contact the Developer
-
-I am a software engineer passionate about **Signal Processing**, **Tooling**, and **System Architecture**. I built Umbra to explore the intersection of cryptography and generative signals.
-
-If you are looking for a developer who can bridge the gap between complex theoretical concepts and shippable software, let's connect.
-
-[**[ Link to your LinkedIn ]**](https://linkedin.com/in/yourprofile) | [**[ Link to your Portfolio ]**](https://yourportfolio.com) | [**[ Email Me ]**](mailto:your.email@example.com)
-
----
 *© 2025 Stelliro. Open source under MIT License.*

@@ -16,7 +16,7 @@ The goal was to transmit HD images through a "hostile" audio channel (static) wi
 *   **Stealth:** The carrier signal is standard PCM Audio (WAV) sounding like Gaussian white noise.
 *   **Security:** Demonstrated a **31dB Security Margin**. Unauthorized decryption attempts using incorrect seeds yield pure entropy (<10dB PSNR).
 
-![Security Proof](/screenshots/original.png/) ![Security Proof](/screenshots/decoding_authorized.png/) ![Security Proof](/screenshots/decoding_unauthorized.png/)
+![Security Proof](/screenshots/original.jpg/) ![Security Proof](/screenshots/decoding_authorized.png/) ![Security Proof](/screenshots/decoding_unauthorized.png/)
 *Fig 1: Left: Original. Middle: Authorized Decryption (God Gene). Right: Unauthorized Decryption (Wrong Key).*
 
 ---

@@ -1,8 +1,10 @@
 import os
+
 import numpy as np
 from PIL import Image
-from umbra.encoding import NoiseStreamEncoder
+
 from umbra.decoding import NoiseStreamDecoder
+from umbra.encoding import NoiseStreamEncoder
 from umbra.metrics import compute_metrics
 
 # --- THE GOD GENE (From Gen 57) ---
@@ -48,7 +50,7 @@ def main():
             packet = encoder.encode(original, seed=BEST_GENE["seed"])
         except AttributeError:
             # Fallback if the class requires a specific method name
-            print(f"Error: Encoder does not accept array input directly.")
+            print("Error: Encoder does not accept array input directly.")
             break
         
         # 2. Decode

@@ -130,7 +130,7 @@ class Heritage:
     cumulative_reward: float = 0.0
     wins: int = 0                      # times this lineage topped a generation
 
-    def child(self, other: "Heritage", *, generation: int, parent_seeds: list) -> "Heritage":
+    def child(self, other: Heritage, *, generation: int, parent_seeds: list) -> Heritage:
         """Breed a child heritage: inherit the stronger competence + deepen."""
         return Heritage(
             competence=max(self.competence, other.competence),

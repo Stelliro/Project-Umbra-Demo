@@ -3,10 +3,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from pathlib import Path
 
 import numpy as np
-import pytest
 
 from umbra.decoding import DiffusionInpainter, NoiseStreamDecoder
 from umbra.encoding import NoiseStreamEncoder

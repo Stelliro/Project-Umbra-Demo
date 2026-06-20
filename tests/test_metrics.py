@@ -5,7 +5,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from umbra.metrics import compute_fft_score, compute_edge_score, compute_metrics
+from umbra.metrics import compute_edge_score, compute_fft_score, compute_metrics
 
 
 def test_compute_metrics_identical_images():

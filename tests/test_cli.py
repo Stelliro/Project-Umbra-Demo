@@ -24,7 +24,7 @@ def test_encode_rejects_zero_sigma(tmp_path):
     img = tmp_path / "dummy.png"
     # create a tiny valid PNG
     from PIL import Image
-    Image.fromarray((__import__("numpy").zeros((8, 8, 3), dtype="uint8"))).save(img)
+    Image.fromarray(__import__("numpy").zeros((8, 8, 3), dtype="uint8")).save(img)
     with pytest.raises(ValueError, match="positive"):
         main(["encode", "--image", str(img), "--output", str(tmp_path / "out.npz"), "--seed", "1", "--sigma", "0"])
 

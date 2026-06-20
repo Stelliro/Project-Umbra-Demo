@@ -2,10 +2,6 @@
 
 from __future__ import annotations
 
-import json
-
-import pytest
-
 from umbra.runs import append_history, get_run_paths, load_history, new_run
 
 

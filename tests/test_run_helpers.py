@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from umbra.run_helpers import RunPaths, chart_file, ensure_run_paths, runs_root
+from umbra.run_helpers import chart_file, ensure_run_paths, runs_root
 
 
 def test_runs_root_creates_directory(tmp_path):

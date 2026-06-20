@@ -1,9 +1,11 @@
 import os
+from dataclasses import fields, replace
+
 import numpy as np
 from PIL import Image
-from dataclasses import replace, fields
-from umbra.encoding import NoiseStreamEncoder
+
 from umbra.decoding import NoiseStreamDecoder
+from umbra.encoding import NoiseStreamEncoder
 from umbra.metrics import compute_metrics
 
 # --- THE GOD GENE ---

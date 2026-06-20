@@ -7,7 +7,6 @@ import pytest
 
 from umbra.adversarial import (
     AdversarialManager,
-    CoevolutionState,
     GeneratorParams,
     apply_generator,
 )

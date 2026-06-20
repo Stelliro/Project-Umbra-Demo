@@ -337,6 +337,7 @@ class UmbraDesktopApp:
 
     def _load_model(self):
         from tkinter import filedialog, messagebox
+
         from .checkpoint import UmbraModel
         path = filedialog.askopenfilename(filetypes=[("Umbra model", "*.umbra.json"), ("All", "*.*")])
         if not path:
@@ -361,9 +362,10 @@ class UmbraDesktopApp:
 
     def _capture_batch_worker(self, repeats: int = 10):
         try:
+            import tempfile
+
             from .capture import record_batch, score_recordings
             from .encoding import NoiseStreamEncoder
-            import tempfile
 
             idx_out = int(self.cb_speaker.get().split(":")[0]) if self.cb_speaker.get() else 0
             idx_in = int(self.cb_mic.get().split(":")[0]) if self.cb_mic.get() else 0

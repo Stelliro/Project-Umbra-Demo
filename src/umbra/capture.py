@@ -24,7 +24,7 @@ from pathlib import Path
 import numpy as np
 from scipy.io import wavfile
 
-from .audio import AUDIO_SCALE_FACTOR, audio_to_image_data, image_data_to_audio
+from .audio import audio_to_image_data, image_data_to_audio
 
 logger = logging.getLogger(__name__)
 

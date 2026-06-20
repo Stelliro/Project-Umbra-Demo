@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "project-umbra"
+version = "0.1.0"
+description = "Toy encoder/decoder pipeline for Project Umbra"
+readme = "README.md"
+authors = [{ name = "Umbra Team" }]
+license = { text = "Proprietary" }
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.24",
+    "pillow>=10.0",
+    "scikit-image>=0.22",
+    "scipy>=1.10",
+    "pandas>=1.5",
+    "pyarrow>=10.0",
+    "vl-convert-python>=1.8",
+]
+
+[project.optional-dependencies]
+# Desktop UIs: the Tkinter explorer (`umbra ui`) needs sounddevice via
+# umbra.audio_mixer; the standalone app.py "Terminal" needs customtkinter.
+ui = [
+    "customtkinter>=5.2",
+    "sounddevice>=0.4",
+]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.5",
+    "mypy>=1.10",
+    "types-Pillow",
+]
+gpu = [
+    "cupy-cuda12x",
+]
+
+[project.scripts]
+umbra = "umbra.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/umbra"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/umbra", "README.md", "pyproject.toml"]

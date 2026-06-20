@@ -1,0 +1,46 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyd
+*.egg-info/
+.eggs/
+
+# --- Virtual environments ---
+.venv/
+venv/
+venv_*/
+.env
+
+# --- Build / packaging artifacts ---
+build/
+dist/
+
+# --- Test / lint / type caches ---
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# --- Editors / OS ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# --- Runtime data & run outputs (keep private) ---
+runs/
+Export/
+cache/
+logs/
+*.log
+
+# --- Generated media / recordings / packets (private) ---
+*.npz
+*.wav
+test_images/
+decoding_authorized.png
+decoding_unauthorized.png
+
+# --- User/machine-specific config & saved models (private) ---
+umbra_settings.json
+*.umbra.json

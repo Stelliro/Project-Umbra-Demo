@@ -1,11 +1,22 @@
 # Project Umbra
 
+> **Status: early prototype — help wanted.** This is an experimental research
+> build, released so others can try it, test it, and help develop it.
+> Contributions of all kinds are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+> Licensed for **noncommercial use only** under the
+> [PolyForm Noncommercial License 1.0.0](LICENSE.md).
+
 Project Umbra is a demonstration toolkit for **seed-based noise image encoding
 and reconstruction**. It transforms an image into a noise-like carrier signal
 using a shared seed, then reconstructs a recognizable version of the original
-from that carrier. The build includes quality metrics, a command-line
-interface, two desktop applications, optional GPU acceleration, and an
-evolutionary search for reconstruction parameters.
+from that carrier. The build includes quality metrics, a command-line interface,
+two desktop applications, optional GPU acceleration, and an evolutionary search
+for reconstruction parameters.
+
+## Try it now (Windows)
+
+Download the latest early-build `.exe` from the **[Releases](../../releases)**
+page and run it — no Python setup required.
 
 ## How it works
 
@@ -33,14 +44,12 @@ evolutionary search for reconstruction parameters.
   configurable CPU/GPU hybrid execution mode.
 - A trainable reward model with metadata-rich checkpoints that can be saved,
   loaded, and trained further.
-- An adaptive difficulty controller that schedules task difficulty smoothly as
-  reconstruction quality improves.
+- An adaptive, self-balancing difficulty curriculum so the search pushes toward
+  the hardest channel it can still reconstruct.
 
-## Requirements
+## Run from source
 
-- Python 3.12 is recommended. See `pyproject.toml` for the full dependency list.
-
-## Installation
+Requires **Python 3.12**.
 
 ```bash
 python -m venv .venv
@@ -49,44 +58,25 @@ python -m venv .venv
 pip install -e ".[ui]"
 ```
 
-Optional GPU support:
+Then:
 
 ```bash
-pip install -e ".[gpu]"
+umbra smoke-test    # quick end-to-end sanity check
+umbra ui            # desktop evolution explorer
+python app.py       # standalone "Terminal" encode/decode tool
 ```
 
-## Usage
+On Windows you can also double-click `launch_umbra_ui.bat` or
+`launch_terminal.bat`; on first run they create the virtual environment, install
+dependencies, and start the app. Optional GPU support: `pip install -e ".[gpu]"`.
 
-Run the end-to-end pipeline and print metrics:
+## Help wanted
 
-```bash
-umbra pipeline --image input.png --seed 1234 --sigma 0.2 \
-    --packet packet.npz --reconstruction recon.png
-```
-
-Encode and decode separately:
-
-```bash
-umbra encode --image input.png --output packet.npz --seed 1234 --sigma 0.25
-umbra decode --packet packet.npz --output recovered.png --seed 1234
-```
-
-Validate the pipeline on a synthetic image:
-
-```bash
-umbra smoke-test
-```
-
-Launch a desktop application:
-
-```bash
-umbra ui            # Tkinter explorer
-python app.py       # customtkinter terminal
-```
-
-On Windows you can double-click `launch_umbra_ui.bat` or `launch_terminal.bat`.
-On first run they create a local virtual environment, install dependencies, and
-start the application.
+This is an early-stage prototype and real help is wanted — running it and
+reporting results, filing bugs, improving the decoder/research, or polishing
+docs. The most promising research direction is a **learned decoder** to push the
+difficulty curriculum past the current Gaussian-denoiser's limit. See
+[CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
 ## Testing
 
@@ -95,8 +85,14 @@ pip install -e ".[dev]"
 pytest
 ```
 
+## License
+
+**Noncommercial use only** — [PolyForm Noncommercial License 1.0.0](LICENSE.md).
+You may use, copy, modify, test, and contribute to this software for any
+noncommercial purpose. You may **not** use it commercially or to make money.
+Provided "as is", without warranty.
+
 ## Status
 
-This is a demonstration build intended to showcase the encoding/decoding
-pipeline and tooling. Reconstructions aim for recognizability rather than
-bit-exact recovery.
+Demonstration / research prototype. Reconstructions aim for recognizability,
+not bit-exact recovery.
